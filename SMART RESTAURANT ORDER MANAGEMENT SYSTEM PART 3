@@ -1,0 +1,48 @@
+
+#include <iostream>
+using namespace std;
+
+void menu()
+{
+    int choice;
+
+    cout << "\n--- Restaurant Menu ---" << endl;
+    cout << "1. Pizza" << endl;
+    cout << "2. Burger" << endl;
+    cout << "3. Sandwich" << endl;
+    cout << "4. Exit" << endl;
+
+    cout << "Enter your choice: ";
+    cin >> choice;
+
+    switch(choice)
+    {
+        case 1:
+            cout << "You selected Pizza" << endl;
+            break;
+
+        case 2:
+            cout << "You selected Burger" << endl;
+            break;
+
+        case 3:
+            cout << "You selected Sandwich" << endl;
+            break;
+
+        case 4:
+            cout << "Thank you! Visit Again." << endl;
+            return;
+
+        default:
+            cout << "Invalid Choice!" << endl;
+    }
+
+    menu();
+}
+
+int main()
+{
+    menu();
+
+    return 0;
+}
